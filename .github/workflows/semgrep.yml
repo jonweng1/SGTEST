@@ -23,5 +23,5 @@ jobs:
       - uses: actions/checkout@v3
       - run:
           environment: 
-              SEMGREP_BASELINE_REF: semgreptest2/main/FEAT/Test-123
+              SEMGREP_BASELINE_REF: main/FEAT/Test-123
           command: semgrep ci
