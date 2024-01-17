@@ -17,7 +17,7 @@ def sql_injection_login_api(request, app):
     password = form.get('password')
     password_hash = _hash_password(password)
 
-    #sql = f"SELECT * FROM users WHERE username='{username}' AND password='{password_hash}'"
+    
 
     db_result = app.db_helper.execute_read(sql)
 
