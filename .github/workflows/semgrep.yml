@@ -20,5 +20,8 @@ jobs:
     container:
       image: returntocorp/semgrep
     steps:
-    - uses: actions/checkout@v3
-    - run: semgrep ci
+      - uses: actions/checkout@v3
+      - run:
+          environment: 
+              SEMGREP_BASELINE_REF: FEAT/Test-123
+          command: semgrep ci
