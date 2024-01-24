@@ -3,8 +3,7 @@ on:
   pull_request: {}
   push:
     branches:
-    - main
-    - master
+    - FEAT/Test-123
     paths:
     - .github/workflows/semgrep.yml
   schedule:
@@ -16,8 +15,7 @@ jobs:
     name: semgrep/ci
     runs-on: ubuntu-20.04
     env:
-      SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }}
-      # SEMGREP_BASELINE_REF: "FEAT/Test-123"
+      SEMGREP_APP_TOKEN: ${{ secrets.SEMGREP_APP_TOKEN }
     container:
       image: returntocorp/semgrep
     steps:
